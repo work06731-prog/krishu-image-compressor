@@ -19,9 +19,18 @@ A free, private, dependency-free image compression website. No API key, backend,
 
 Open `dist/index.html` in a modern browser. Everything runs locally, even offline after downloading the project. Alternatively, run `python -m http.server 8080 --directory dist` and visit http://localhost:8080.
 
-## Publish to GitHub Pages
+## Deploy to Vercel
 
-Push this repository, then open **Settings → Pages → Source → GitHub Actions**. The included workflow publishes the `dist` folder on pushes to `main`, or when manually run. GitHub hosting availability depends on your account and repository settings.
+1. Open https://vercel.com/new and import `work06731-prog/krishu-image-compressor`.
+2. Keep **Root Directory** at the repository root (`./`). Do not select `dist` as the root.
+3. Click **Deploy**. The root `vercel.json` selects the Other framework preset, skips installation/build commands, and publishes `dist` automatically.
+4. Open the URL Vercel returns. No API keys or environment variables are required.
+
+If the repository was already imported, redeploy the latest `main` commit. Keep the root directory at `./`; remove any old framework or build overrides if needed. Future pushes to the connected production branch can be deployed by Vercel's Git integration.
+
+The GitHub Pages workflow was removed because this project now targets Vercel. The app remains usable as a local static website.
+
+Configuration reference: https://vercel.com/docs/project-configuration/vercel-json
 
 ## Limits and tradeoffs
 
@@ -36,7 +45,7 @@ No image data leaves the device. Theme preference is the only value stored in lo
 - `dist/index.html`: interface
 - `dist/style.css`: responsive styles
 - `dist/app.js`: compression, previews, downloads, ZIP writer
-- `.github/workflows/pages.yml`: optional Pages deployment
+- `vercel.json`: automatic Vercel deployment settings
 
 ## License
 
