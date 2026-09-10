@@ -4,6 +4,11 @@ A free, private, dependency-free image compression website. No API key, backend,
 
 ## Features
 
+- Reference-inspired white/blue interface with large Select Image area and image cards
+- Default 100 KB target and automatic compression when images are added
+- Slider and Size modes; custom KB, MB and byte targets (1 KB = 1,000 bytes)
+- Quick 20/50/100/200/500 KB presets and help/FAQ sections
+
 - Drag/drop, multiple file selection and image paste
 - JPG, PNG and static WebP input; JPG/PNG/WebP output where the browser supports encoding
 - Balanced, smallest-size and high-quality presets; adjustable lossy quality
